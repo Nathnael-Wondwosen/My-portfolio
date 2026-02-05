@@ -206,9 +206,10 @@
         $('.back-to-top').fadeOut('slow');
     }
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
+    // Back to top smooth scroll (handles anchor default)
+    $('.back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 900, 'easeInOutExpo');
     });
 
     // Add dynamic particles on hover
