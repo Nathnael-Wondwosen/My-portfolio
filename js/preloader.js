@@ -38,16 +38,21 @@
     }
 
     window.addEventListener('load', () => {
-        setTimeout(() => {
-            preloader.style.transition = 'opacity 0.5s ease';
-            preloader.style.opacity = '0';
-            
-            setTimeout(() => {
-                preloader.remove();
-                doc.documentElement.classList.remove('preloading');
-            }, 500);
-        }, 250); // shorter delay so it clears promptly
+        setTimeout(() => hidePreloader(), 250);
     });
-})();
 
+    // Fallback: hide preloader if load is slow or an asset hangs
+    const fallbackTimeout = setTimeout(() => hidePreloader(), 4000);
+
+    function hidePreloader() {
+        if (!preloader.parentNode) return;
+        preloader.style.transition = 'opacity 0.5s ease';
+        preloader.style.opacity = '0';
+        clearTimeout(fallbackTimeout);
+        setTimeout(() => {
+            preloader.remove();
+            doc.documentElement.classList.remove('preloading');
+        }, 500);
+    }
+})();
 
