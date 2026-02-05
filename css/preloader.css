@@ -1,0 +1,142 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #17303b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-ring {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 2px solid transparent;
+    border-top: 2px solid #4be1ff;
+    border-radius: 50%;
+    animation: rotate 2s linear infinite;
+}
+
+.loader-ring:nth-child(2) {
+    width: 120px;
+    height: 120px;
+    border-top: 2px solid #007e83;
+    animation-duration: 1.8s;
+    animation-direction: reverse;
+}
+
+.loader-ring:nth-child(3) {
+    width: 90px;
+    height: 90px;
+    border-top: 2px solid #4be1ff;
+    animation-duration: 1.6s;
+}
+
+.loader-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4be1ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loader-progress {
+    position: absolute;
+    bottom: -40px;
+    width: 100px;
+    height: 2px;
+    background: rgba(75, 225, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loader-progress-bar {
+    width: 100%;
+    height: 100%;
+    background: #4be1ff;
+    transform-origin: left;
+    animation: progress 2s ease-in-out infinite;
+}
+
+.preloading body {
+    overflow: hidden;
+}
+
+.preloading .content-wrapper,
+.preloading .canvas-container {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    50% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes progress {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .loader {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .loader-ring {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .loader-ring:nth-child(2) {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .loader-ring:nth-child(3) {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .loader-text {
+        font-size: 1.2rem;
+    }
+}
+
+
+

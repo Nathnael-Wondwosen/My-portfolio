@@ -1,0 +1,70 @@
+/******* Customized Bootstrap ********/
+
+$primary: #1098a1;    // Modern blue
+$secondary: #17303B;  // Dark blue
+$dark: #0a1f2f;      // Deeper dark blue
+$darker: #07151e;    // Darkest blue for backgrounds
+$light: #f8f9fa;
+$body-color: #6c757d;
+
+$navbar-dark-color: $light;
+$navbar-dark-hover-color: $primary;
+$navbar-dark-active-color: $primary;
+
+$card-bg: rgba(10, 31, 47, 0.95);  // Dark transparent background
+$card-border-color: rgba(75, 225, 255, 0.1);
+$card-color: $light;
+
+$enable-negative-margins: true;
+$enable-responsive-font-sizes: true;
+
+$border-radius: 8px;
+$box-shadow: 0 0.5rem 1rem rgba($darker, 0.25);
+
+// Modern Typography System
+$font-family-sans-serif: 'Plus Jakarta Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+$font-family-base: $font-family-sans-serif;
+
+// Modern Font Sizes
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+// Heading Sizes
+$h1-font-size: 3.5rem;
+$h2-font-size: 2.75rem;
+$h3-font-size: 2rem;
+$h4-font-size: 1.5rem;
+$h5-font-size: 1.25rem;
+$h6-font-size: 1rem;
+
+// Font Weights
+$font-weight-lighter: 200;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+
+// Line Heights
+$line-height-base: 1.6;
+$line-height-sm: 1.25;
+$line-height-lg: 1.8;
+$headings-line-height: 1.3;
+
+// Letter Spacing
+$letter-spacing-base: -0.01em;
+$letter-spacing-tight: -0.02em;
+$letter-spacing-wide: 0.02em;
+
+// Other Typography Variables
+$paragraph-margin-bottom: 1.5rem;
+$headings-margin-bottom: 1rem;
+$headings-font-weight: 700;
+
+// Enable RFS (Responsive Font Size)
+$enable-responsive-font-sizes: true;
+
+@import "bootstrap/scss/bootstrap";
