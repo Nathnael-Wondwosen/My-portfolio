@@ -8,4 +8,5 @@ Whether collaborating within a team or leading a project, I focus on delivering 
 
 ## Let’s Connect!
 Feel free to browse my work or [natiwond95@gmail.com](#) — I’m always open to new ideas, partnerships, and challenges!
-<img src="https://nathnael.netlify.app"/>
+
+
